@@ -1,0 +1,15 @@
+<nav class="orange">
+  <div class="nav-wraper">
+      <ul id="slide-out" class="side-nav">
+      <div ng-repeat='item in ::ctrl.menuItens'>
+        <menu-item-subitens item='item' ng-if='::item.subItens'></menu-item-subitens>
+        <menu-item item='item' ng-if='!item.subItens' ></menu-item>
+      </div>
+    </ul>
+  </div>
+  <a class="button-collapse show-on-large waves-effetc waves-light" 
+    href='javascript:void(0)'
+    data-activates='slide-out'>
+    <i class="material-icons">menu</i>
+  </a>
+</nav>
